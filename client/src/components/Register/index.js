@@ -22,7 +22,7 @@ function App() {
     const onRegisterUser = async (event) => {
         event.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/registerUser', user);
+            const res = await axios.post('https://mern-app-backend-70xm.onrender.com/registerUser', user);
             setMessage(res.data.message);
             setErr('');
         } catch (error) {
@@ -35,7 +35,7 @@ function App() {
     const onCreatePost = async (event) => {
         event.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/createPost', post);
+            const res = await axios.post('https://mern-app-backend-70xm.onrender.com/createPost', post);
             setMessage(res.data.message);
             setErr('');
             setPost({
